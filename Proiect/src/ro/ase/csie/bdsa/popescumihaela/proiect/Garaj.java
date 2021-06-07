@@ -3,10 +3,42 @@ package ro.ase.csie.bdsa.popescumihaela.proiect;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Garaj {
     public static void main(String[] args) {
-        System.out.println("ABSTRACTIZAREA DATELOR:");
+
+        String titlu = "ABSTRACTIZAREA DATELOR - PROIECT BDSA!";
+        System.out.println(titlu);
+        titlu = "ABSTRACTIZAREA DATElOR!";
+
+        System.out.println(titlu);
+        System.out.println(titlu.charAt(4));
+        System.out.println(titlu.concat("PROIECT BDSA"));
+        System.out.println(titlu.replace("l", "L"));
+
+        String titluNou = new String("PROIECT MASTER BDSA");
+        if (titluNou == titlu) {
+            System.out.println("Titlurile sunt EGALE");
+        } else {
+            System.out.println("Titlurile NU sunt egale");
+        }
+
+        StringBuilder sb1 = new StringBuilder("Student");
+        StringBuffer sb2 = new StringBuffer("Mihaela Popescu");
+
+
+        System.out.println(sb2);
+        sb2.insert(15, "Andreea");
+        sb2.append("- GRUPA 1109");
+        System.out.println(sb2);
+
+        sb2.reverse();
+        System.out.println(sb2);
+
+        System.out.println("\n================\n");
+
+
         Vehicul vehiculTest = new Vehicul();
         vehiculTest.setCuloare("ROSU");
         vehiculTest.setPret(5000);
@@ -120,6 +152,25 @@ public class Garaj {
         box.remove(bicicleta);
         box.show();
         System.out.println("Parcul auto are " + box.getSize() + " vehicule");
+
+        System.out.println("\n================\n");
+
+        List<Vehicul> listaDeVehicule = new ArrayList<Vehicul>();
+        Vehicul[] vectorDeVehicule = {autoutilitara,bicicleta,microbuz};
+        for (Vehicul v : vectorDeVehicule) {
+            listaDeVehicule.add(v);
+        }
+        System.out.println(listaDeVehicule);
+        Masina m = new Autoutilitara();
+        Masina n = new Microbuz();
+        listaDeVehicule.add(m);
+        System.out.println(listaDeVehicule);
+        System.out.println("---------");
+        listaDeVehicule.add(1, n);
+        System.out.println(listaDeVehicule);
+        System.out.println("---------");
+        System.out.println(listaDeVehicule.get(0) + " " + listaDeVehicule.get(1) + " " + listaDeVehicule.get(2));
+        System.out.println("*********** SFARSIT ***********");
 
 
     }

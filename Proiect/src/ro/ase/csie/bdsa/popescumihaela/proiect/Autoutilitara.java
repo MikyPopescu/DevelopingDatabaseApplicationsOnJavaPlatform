@@ -4,6 +4,9 @@ public class Autoutilitara extends Masina implements IDeInchiriat {
     private float tonaj;
     private Boolean areLift;
 
+    public Autoutilitara() {
+    }
+
     public Autoutilitara(String culoare, float pret, String numarInmatriculare, String combustibil, Integer vitezaMaxima, float tonaj, Boolean areLift) {
         super(culoare, pret, numarInmatriculare, combustibil, vitezaMaxima);
         this.tonaj = tonaj;

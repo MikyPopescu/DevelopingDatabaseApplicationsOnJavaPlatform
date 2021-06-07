@@ -42,6 +42,5 @@ public abstract class Masina extends Vehicul {
        System.out.println("Masina " + numarInmatriculare + " are culoarea "+getCuloare() + " si prinde viteaza maxima de "+vitezaMaxima + " km/h");
    }
 
-
     public abstract void porneste();
 }

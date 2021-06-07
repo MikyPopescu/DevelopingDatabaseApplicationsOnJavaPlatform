@@ -4,6 +4,9 @@ public class Microbuz extends Masina implements IDeInchiriat {
     private int numarLocuri;
     private Boolean areTahograf;
 
+    public Microbuz() {
+    }
+
     public Microbuz(String culoare, float pret, String numarInmatriculare, String combustibil, Integer vitezaMaxima, int numarLocuri, Boolean areTahograf) {
         super(culoare, pret, numarInmatriculare, combustibil, vitezaMaxima);
         this.numarLocuri = numarLocuri;
